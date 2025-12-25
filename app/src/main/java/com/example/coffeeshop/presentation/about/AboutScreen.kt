@@ -6,6 +6,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.Alignment
+
 @Composable
 fun AboutScreen(paddingValues: PaddingValues) {
     Column(
@@ -16,8 +20,18 @@ fun AboutScreen(paddingValues: PaddingValues) {
     ) {
         Text("О нас", style = MaterialTheme.typography.headlineSmall)
         Spacer(Modifier.height(12.dp))
-        Text("CoffeeShop — учебное приложение онлайн-кофейни.")
+        Text("CoffeeShop — лучши прилолжение для заказа кофэ.")
         Spacer(Modifier.height(8.dp))
-        Text("Функции: просмотр меню, оформление заказа, информация о кофейне.")
+        Text("Слоган:", style = MaterialTheme.typography.headlineSmall)
+        Spacer(Modifier.height(8.dp))
+        Text("Покупайте кофе у нас и у вас будет все - деньги, тачки, админки!")
+
+//        Image(
+//            painter = painterResource(id = R.drawable.kruto),
+//            contentDescription = "Это я",
+//            modifier = Modifier
+//                .size(160.dp)
+//                .padding(bottom = 16.dp)
+//        )
     }
 }

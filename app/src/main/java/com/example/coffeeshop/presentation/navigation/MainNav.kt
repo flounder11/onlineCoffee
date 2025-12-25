@@ -8,11 +8,12 @@ import androidx.navigation.compose.*
 import com.example.coffeeshop.presentation.about.AboutScreen
 import com.example.coffeeshop.presentation.menu.MenuScreen
 import com.example.coffeeshop.presentation.order.OrderScreen
+import com.example.coffeeshop.presentation.history.HistoryScreen
 
 @Composable
 fun MainNav() {
     val navController = rememberNavController()
-    val items = listOf(Route.Menu, Route.Order, Route.About)
+    val items = listOf(Route.Menu, Route.Order, Route.History, Route.About)
 
     Scaffold(
         bottomBar = {
@@ -46,6 +47,7 @@ fun MainNav() {
             composable(Route.Menu.route) { MenuScreen(padding) }
             composable(Route.Order.route) { OrderScreen(padding) }
             composable(Route.About.route) { AboutScreen(padding) }
+            composable(Route.History.route) { HistoryScreen(padding) }
         }
     }
 }

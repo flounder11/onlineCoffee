@@ -13,4 +13,8 @@ interface CoffeeApi {
 
     @POST("orders")
     suspend fun createOrder(@Body body: OrderRequestDto): OrderResponseDto
+
+    @GET("orders")
+    suspend fun getOrders(): List<OrderDto>;
+
 }

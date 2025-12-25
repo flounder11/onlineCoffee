@@ -3,10 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 
-//    alias(libs.plugins.hilt)
+    alias(libs.plugins.hilt)
     id("kotlin-kapt")
-
-    alias(libs.plugins.hilt) apply false
 }
 
 android {
@@ -69,8 +67,4 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
-}
-
-configurations.configureEach {
-    resolutionStrategy.force("com.squareup:javapoet:1.13.0")
 }
