@@ -5,7 +5,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.*
-import com.example.coffeeshop.presentation.about.AboutScreen
 import com.example.coffeeshop.presentation.menu.MenuScreen
 import com.example.coffeeshop.presentation.order.OrderScreen
 import com.example.coffeeshop.presentation.history.HistoryScreen
@@ -13,7 +12,7 @@ import com.example.coffeeshop.presentation.history.HistoryScreen
 @Composable
 fun MainNav() {
     val navController = rememberNavController()
-    val items = listOf(Route.Menu, Route.Order, Route.History, Route.About)
+    val items = listOf(Route.Menu, Route.Order, Route.History)
 
     Scaffold(
         bottomBar = {
@@ -34,7 +33,7 @@ fun MainNav() {
                             }
                         },
                         label = { Text(item.title) },
-                        icon = { /* можно оставить пустым, чтобы не усложнять */ }
+                        icon = {}
                     )
                 }
             }
@@ -46,7 +45,6 @@ fun MainNav() {
         ) {
             composable(Route.Menu.route) { MenuScreen(padding) }
             composable(Route.Order.route) { OrderScreen(padding) }
-            composable(Route.About.route) { AboutScreen(padding) }
             composable(Route.History.route) { HistoryScreen(padding) }
         }
     }
