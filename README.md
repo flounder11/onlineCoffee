@@ -26,6 +26,7 @@
     - статическая информация
 
 ### Архитектура (Android)
+```
 presentation/
 ├─ menu
 ├─ order
@@ -42,7 +43,7 @@ data/
 ├─ dto
 ├─ mapper
 └─ repository
-
+```
 
 ---
 
